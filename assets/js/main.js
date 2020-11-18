@@ -24,11 +24,13 @@ console.log(lista);
 var listaAlfabet = lista.sort();
 
 for (var i=0; i<lista.length; i++){
-    var cognome = lista[i];
-
+    var cognome = listaAlfabet[i];
+    var database = document.getElementById("lista-cognomi").innerHTML;
+    document.getElementById("lista-cognomi").innerHTML = database + "<li>" + cognome + "</li>";
     console.log(lista[i]);
 }
 console.log(lista);
 
 // scrivi anche la posizione "umana" della lista in cui il nuovo utente si trova
+document.getElementById("posizione").innerHTML = "La tua posizione è: " + (listaAlfabet.indexOf(cognomeRichiesto)+ 1);
 console.log(listaAlfabet.indexOf(cognomeRichiesto)+ 1);
